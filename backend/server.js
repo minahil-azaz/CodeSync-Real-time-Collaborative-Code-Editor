@@ -8,6 +8,7 @@ const app= express()
 // wrap the app in server
 
 const httpServer = createServer(app)
+app.use(express.static("public"))
 
 
 const io = new Server(httpServer, {
